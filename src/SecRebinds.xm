@@ -39,5 +39,5 @@ void rebindSecFuncs() {
 		{"SecItemUpdate", (void *)zxSecItemUpdate, (void **)&origSecItemUpdate},
 		{"SecItemDelete", (void *)zxSecItemDelete, (void **)&origSecItemDelete}
 	};
-	NSLog(@"[zx] rebind_symbols result: %d", rebind_symbols(rebinds, 4));
+	rebind_symbols(rebinds, 4);
 }
